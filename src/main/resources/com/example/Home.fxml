@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="639.0" style="-fx-background-color: &quot;black&quot;;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.HomeController">
+   <children>
+      <AnchorPane prefHeight="97.0" prefWidth="639.0" style="-fx-background-image: url(&quot;https://th.bing.com/th/id/OIP.Y8ulbH3csWGhaEokiANYgwHaG6?pid=ImgDet&amp;rs=1&quot;);">
+         <children>
+            <TextField fx:id="search" layoutX="331.0" layoutY="38.0" prefHeight="25.0" prefWidth="235.0" promptText="Search movie name here....." style="-fx-border-radius: 10 0px;" />
+            <Button fx:id="searchButton" layoutX="561.0" layoutY="38.0" mnemonicParsing="false" onAction="#search" onMouseEntered="#hoverSearch" onMouseExited="#hoverSearch" prefHeight="25.0" prefWidth="58.0" style="-fx-background-color: &quot;black&quot;;" text="Search" textFill="#ababab">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font></Button>
+            <Label fx:id="logo" layoutX="53.0" layoutY="24.0" prefHeight="36.0" prefWidth="180.0" text="Add Movies" textAlignment="CENTER">
+               <font>
+                  <Font name="Agency FB Bold" size="41.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5607734806629834" centerY="0.8175355450236967" focusDistance="-0.32183908045977017" radius="0.5459770114942529">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.3100000023841858" blue="0.3100000023841858" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="0.9852350354194641" blue="0.5299999713897705" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Button fx:id="exit" layoutX="605.0" layoutY="-1.0" mnemonicParsing="false" onAction="#exit" onMouseEntered="#hoverExit" onMouseExited="#hoverExit" style="-fx-background-color: &quot;black&quot;;" text="Exit" textFill="#ababab">
+               <font>
+                  <Font name="Bell MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="help" layoutX="545.0" layoutY="-4.0" mnemonicParsing="false" onAction="#helpMethod" onMouseEntered="#hoverHelp" onMouseExited="#hoverHelp" prefHeight="25.0" prefWidth="47.0" style="-fx-background-color: &quot;black&quot;;" text="Help" textFill="#ababab">
+               <font>
+                  <Font name="Bell MT Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="t1" layoutX="115.0" layoutY="127.0" onMouseEntered="#hoverT1" promptText="Type movie name">
+         <tooltip>
+            <Tooltip text="Empty Tooltip" />
+         </tooltip></TextField>
+      <TextField fx:id="t2" layoutX="115.0" layoutY="162.0" onMouseEntered="#hoverT2" promptText="Type ISBN13 " />
+      <DatePicker fx:id="t3" layoutX="115.0" layoutY="197.0" onMouseEntered="#hoverT3" prefHeight="25.0" prefWidth="149.0" promptText="Select release date" />
+      <TextField fx:id="t4" layoutX="115.0" layoutY="233.0" onMouseEntered="#hoverT4" promptText="Type location" />
+      <TextField fx:id="t8" layoutX="116.0" layoutY="370.0" onMouseEntered="#hoverT8" promptText="Type price" />
+      <TextField fx:id="t7" layoutX="116.0" layoutY="335.0" onMouseEntered="#hoverT7" promptText="Type time duration" />
+      <Label layoutX="20.0" layoutY="131.0" text="Movie Name:" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="375.0" text="Price:" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="272.0" text="Genre:" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="238.0" text="Location:" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="200.0" text="Release Date:" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="167.0" text="ISBN13 :" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="340.0" text="Duration:" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="t6" layoutX="115.0" layoutY="301.0" onMouseEntered="#hoverT6" promptText="Give rating(1-5)" />
+      <Label layoutX="23.0" layoutY="306.0" text="Rating:" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutY="115.0" prefHeight="0.0" prefWidth="784.0" style="-fx-background-color: &quot;grey&quot;;" />
+      <AnchorPane layoutX="-5.0" layoutY="403.0" prefHeight="62.0" prefWidth="644.0" style="-fx-background-color: &quot;white&quot;;">
+         <children>
+            <Button fx:id="add" layoutX="17.0" layoutY="20.0" mnemonicParsing="false" onAction="#addMethod" onMouseEntered="#hoverAdd" onMouseExited="#hoverAdd" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: &quot;black&quot;;" text="Add" textFill="#ababab">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="save" layoutX="417.0" layoutY="19.0" mnemonicParsing="false" onAction="#saveMethod" onMouseEntered="#hoverSave" onMouseExited="#hoverSave" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: &quot;black&quot;;" text="Save" textFill="#ababab">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="del" layoutX="303.0" layoutY="19.0" mnemonicParsing="false" onAction="#deleteMethod" onMouseEntered="#hoverDelete" onMouseExited="#hoverDelete" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: &quot;black&quot;;" text="Delete" textFill="#ababab">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="refresh" layoutX="194.0" layoutY="20.0" mnemonicParsing="false" onAction="#refreshMethod" onMouseEntered="#hoverRefresh" onMouseExited="#hoverRefresh" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: &quot;black&quot;;" text="Refresh" textFill="#ababab">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="load" layoutX="533.0" layoutY="19.0" mnemonicParsing="false" onAction="#loadMethod" onMouseEntered="#hoverLoad" onMouseExited="#hoverLoad" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: &quot;black&quot;;" text="Load" textFill="#ababab">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="mod" layoutX="104.0" layoutY="20.0" mnemonicParsing="false" onAction="#modMethod" onMouseEntered="#hoverModify" onMouseExited="#hoverModify" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: &quot;black&quot;;" text="Modify" textFill="#ababab">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <ListView fx:id="list" editable="true" layoutX="285.0" layoutY="184.0" prefHeight="210.0" prefWidth="331.0">
+         <effect>
+            <InnerShadow />
+         </effect></ListView>
+      <Label fx:id="error" layoutX="285.0" layoutY="103.0" prefHeight="20.0" prefWidth="223.0" text="Status: &quot;WELCOME&quot;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Line endX="5.0" endY="100.0" layoutX="-3.0" startX="5.0" startY="403.0" stroke="WHITE" strokeWidth="4.0" />
+      <Line endX="9.0" endY="92.0" layoutX="628.0" layoutY="5.0" startX="8.0" startY="396.0" stroke="WHITE" strokeWidth="4.0" />
+      <Line endX="7.0" endY="-36.5" layoutX="269.0" layoutY="395.0" startX="7.0" startY="76.5" strokeWidth="17.0" />
+      <Label layoutX="487.0" layoutY="463.0" text="Name: Meharvaan Singh" textFill="WHITE" />
+      <ComboBox fx:id="t5" layoutX="115.0" layoutY="266.0" onMouseEntered="#hoverT5" prefWidth="150.0" style="-fx-background-color: &quot;white&quot;;" />
+      <TextField fx:id="searchResult" layoutX="283.0" layoutY="129.0" prefHeight="25.0" prefWidth="269.0" promptText="Search result......" />
+      <Button fx:id="clear" layoutX="551.0" layoutY="129.0" mnemonicParsing="false" onAction="#clearMethod" onMouseEntered="#clearHover" onMouseExited="#clearHover" prefHeight="25.0" prefWidth="58.0" style="-fx-background-color: &quot;black&quot;; -fx-border-color: &quot;#ababab&quot;;" text="Clear" textFill="#ababab">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
